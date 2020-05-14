@@ -10,7 +10,9 @@ First, you have to write "python3 homework" + the number of a homework than want
 Then, you should write "/" and the name of the program that you want to check.
 For example:
 
+
     python3 homework1/Hauss.py 
+
 
 WARNING: The programs in homework3 folder can't be executed from the home folder.
 To execute this you must go to the folder by the command:
