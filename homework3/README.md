@@ -24,7 +24,9 @@ This program take input data from files. So, user can't excute it from the main 
 Lets note what programs use:
   
   linear_interpolation: train1.dat, train1.ans, test1.dat, test1.ans
+  
   Lagrange_interpolate: train2.dat, train2.ans, test2.dat, test2.ans
+  
   spline: train.dat, train.ans, test.dat, test.ans
   
  If you going to change input data, write your changes in the files train.dat, train.ans, test.dat.
