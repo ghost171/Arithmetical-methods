@@ -25,7 +25,9 @@ To execute this you must go to the folder by the command:
     cd homework3
     
 Also, you can go to another folder whatever you want, by switching folder's name after "cd ".
+
 2) Jupyter
+
 First, you have to write "jupyter notebook homework" + the number of a homework than want to check.
 Then, you should write "/" and the name of this homework again with his number.
 Finally, you must add ".ipynb" to the note.
