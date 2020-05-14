@@ -1,11 +1,18 @@
 # Aritmetical methods
 ## Topics of the subject 
+
 1. Linear Algebra
+
 2. Iteration methods
+
 3. Interpolation
+
 4. Differentiation
+
 ## How to execute a program?
+
 1) From python3 
+
 First, you have to write "python3 homework" + the number of a homework than want to check.
 Then, you should write "/" and the name of the program that you want to check.
 For example:
