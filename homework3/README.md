@@ -20,6 +20,7 @@ To execute the programs in Jupyter press button-combination Shift+Enter.
 
 ## Hint for understaing:
 This program take input data from files. So, user can't excute it from the main directory of the repository.
+
 Lets note what programs use:
   linear_interpolation: train1.dat, train1.ans, test1.dat, test1.ans
   Lagrange_interpolate: train2.dat, train2.ans, test2.dat, test2.ans
