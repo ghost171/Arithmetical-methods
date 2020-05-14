@@ -1,38 +1,49 @@
+import time
 import numpy as np
 import math
-n = 4
+n = int(input())
 def seidel (A , f , x ):
-    xnew = [0] * n
-    for i in range(0, n - 1):
-        s = 0
-        for j in range(0, i - 1):
-            s = s + A [ i ][ j ] * xnew [ j ]
-        for j in range(i + 1, n - 1):
-            s = s + A[ i ][ j ] * x[ j ]
-        xnew[ i ] = int(( f[ i ] - s) / A [ i ][ i ])
+    xnew = np.zeros(n)
+    for i in range(n):
+        s = float(0)
+        for j in range(i):
+            s = float(s + A [ i ][ j ] * xnew [ j ])
+        for j in range(i + 1, n):
+            s = float(s + A[ i ][ j ] * x[ j ])
+        xnew[ i ] = float(( f[ i ] - s) / A [ i ][ i ])
     return xnew
 
 def diff(x, xnew):
-    s = 0
-    for i in range(0, n - 1):
-        s += (x[i] - xnew[i]) * (x[i] - xnew[i])
-    return int(math.sqrt(s))
+    s = float(0)
+    for i in range(0, n):
+        s += float((x[i] - xnew[i]) ** 2)
+    return float(math.sqrt(s))
 
 def solve (A , f ):
-    xnew = n * [0]
-    eps = 0.2
+    xnew = np.zeros(n)
+    eps = 0.01
     while True:
-        x = xnew
+        x = np.array(xnew)
         xnew = seidel (A , f , x )
-        if(diff(x, xnew) <= eps):
-            print(x)
+        if(diff(x, xnew) < eps):
             break
+    return x
 
-A = np.array(   [
-                [2, -1, 0, -1],
-                [0, 2, -1, 0],
-                [-1, 1, 3, 0],
-                [1, 0, -2, 4]
-                ])
-f = np.array([4, 3, 2, 1])
-solve(A, f)
+A = np.random.rand(n, n)
+f = np.random.rand(n)
+for i in range(n):
+    for j in range(n):
+        if i != j:
+            A[i][i] += A[i][j]
+print("My algorithm:")
+my_time = time.time()
+for i in solve(A, f):
+    print(i)
+my_time = time.time() - my_time
+print("Linalg:")
+linalg_time = time.time()
+for i in np.linalg.solve(A, f):
+    print(i)
+linalg_time = time.time() - linalg_time
+print("Linalg time:", linalg_time)
+print("My time:", my_time)

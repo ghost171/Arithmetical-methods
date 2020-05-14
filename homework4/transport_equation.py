@@ -11,7 +11,7 @@ def solution(x , t):
 def animate (k):
     plt.clf()
     plt.ylim(0 ,1)
-    #plt.title( time = "1" + str(tau * k))
+    plt.title( "time =" + str(tau * k) + seconds)
     plt.plot(x, y[k], marker = 'o')
     plt.legend("Numerical")
     plt.plot(x, u[k], marker = '*')
@@ -42,5 +42,5 @@ for k in range (m):
     u[k] = vsolution(x , tau * k)
 
 ani = animation.FuncAnimation(plt.figure(0), animate, frames = y.shape[0], interval = 100)
-ani.save('transfer.mp4')
+#ani.save('transfer.mp4')
 plt.show()

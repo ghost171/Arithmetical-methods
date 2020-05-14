@@ -1,6 +1,7 @@
 import numpy as np
+import time
 import math
-n = 4
+n = int(input())
 def jacobi (A , f , x ):
     xnew = n * [0]
     for i in range(n):
@@ -19,24 +20,31 @@ def diff(x, xnew):
     return float(math.sqrt(s))
 
 def solve (A , f):
-    eps = 0.2
-    xnew = n * [0]
+    eps = 0.01
+    xnew = np.zeros(n)
     while True:
         x = xnew
         xnew = jacobi (A , f , x )
-        if ( abs(diff(x, xnew )) < abs(eps) ):
-            print(x)
-            for i in range(n):
-                x[i] = round(x[i])
-            print(x)
-            break
-    
+        if ( diff(x, xnew ) < eps ):
+            return x
 
-A = np.array(   [
-                [2, -1, 0, -1],
-                [0, 2, -1, 0],
-                [-1, 1, 3, 0],
-                [1, 0, -2, 4]
-                ])
-f = np.array([4, 3, 2, 1])
+
+A = np.random.rand(n, n)
+f = np.random.rand(n)
+for i in range(n):
+    for j in range(n):
+        if i != j:
+            A[i][i] += A[i][j]
+print("My algorithm:")
+my_time = time.time()
 solve(A, f)
+my_time = time.time() - my_time
+for el in solve(A, f):
+    print(el)
+linalg_time = time.time()
+print("Linalg:")
+for el in np.linalg.solve(A, f):
+    print(el)
+linalg_time = time.time() - linalg_time
+print("My time:", my_time)
+print("Linalg time:", linalg_time)

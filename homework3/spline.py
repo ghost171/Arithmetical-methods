@@ -1,6 +1,17 @@
 import string
 import numpy as np
 from scipy import interpolate
+import scipy
+import matplotlib.pyplot as plt
+
+def interpolate(t, m, n, x, A, B, C, D, handle):
+	f = np.zeros(m)
+	for j in range(m):
+		for i in range(0, n - 1):
+			if (x[i] <= t[j] and t[j] <= x[i+1]):
+				f[j] = A[i]*(t[j]-x[i])**3 + B[i]*(t[j]-x[i])**2 + C[i]*(t[j]-x[i]) + D[i]
+	return f
+
 
 def sweep ( a, b, c, f, n):
     alpha = (n + 1) * [0]
@@ -44,21 +55,26 @@ def generateSpline (x , y):
     return A , B , C , D
 
 handle = open("train.dat")
-data = handle.read()
+
 x = []
-for i in range(len(data)):
-    if(data[i].isdigit() == True):
-        x.append(int(data[i]))
+x = [float(i) for i in handle.readline().split()]
 handle.close()
 handle = open("train.ans")
-data = handle.read()
 y = []
-for i in range(len(data)):
-    if data[i].isdigit() == True:
-        y.append(int(data[i]))
+y = [float(i) for i in handle.readline().split()]
+handle.close()
+handle = open('test.dat')
+z = []
+z = [float(i) for i in handle.readline().split()]
 handle.close()
 x = np.array(x)
+print('X:', x)
 y = np.array(y)
+print('Y:', y)
+z = np.array(z)
+print('Z:', z)
+n = int(len(x))
+m = int(len(z))
 A, B ,C , D = generateSpline(x, y)
 handle = open('test.ans', 'w')
 for el in A:
@@ -73,9 +89,26 @@ handle.write("\n")
 for el in D:
     handle.write(str(el) + " ")
 handle.write("\n")
-handle.close()
 
-print(A)
-print(B)
-print(C)
-print(D)    
+print("A:", A)
+print("B:", B)
+print("C:", C)
+print("D:", D)  
+
+function = interpolate(z, m,n,  x, A, B, C, D, handle)
+print("My function:", function)
+print("Linalg function:", scipy.interpolate.InterpolatedUnivariateSpline(x, y)(z))
+
+min_xz = min( np.min(x), np.min(z) )
+max_xz =  max( np.max(x), np.max(z) )
+
+xnew = np.linspace(min_xz , max_xz, 50 )
+ynew = interpolate(xnew, len(xnew), n, x, A, B, C, D, handle)
+
+
+plt.plot(x, y, 'o', xnew, ynew)
+plt.plot(z, function, 'o')
+plt.grid(True)
+plt.show()
+
+handle.close()

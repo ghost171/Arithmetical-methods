@@ -1,6 +1,6 @@
+#Hauss method
 import numpy as np
 import time
-import matplotlib.pyplot as plt
 
 n = int(input())
 A = np.random.rand(n, n)
@@ -19,17 +19,18 @@ print()
 x1 = np.linalg.solve(A,f)
 linalg_time = time.time() - linalg_time
 for i in range(n):
-    print(x1[i]),
+    print(x1[i])
 
-print(linalg_time)
 my_time = time.time()
 for k in range(n):
-        A[k, k + 1:] = A[k, k + 1:] / A[k, k]
+        for j in range(k + 1, n):
+            A[k, j] = A[k, j] / A[k, k]
         f[k] /= A[k][k]    
         for i in range(k + 1, n):
-            A[i, k + 1:] -= A[i][k] * A[k, k + 1:]
-            f[i] -= A[i][k] * f[k]
-        A[k + 1:, k] = np.zeros(n - k - 1)
+            for j in range(k + 1, n):
+                A[i][j] = A[i][j] - A[i][k] * A[k][j]
+            f[i] = f[i] - A[i][k] * f[k]
+            A[i][k] = 0
 x = np.zeros(n)
 for i in range(n - 1, -1, -1):
     x[i] = f[i]

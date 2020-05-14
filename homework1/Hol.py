@@ -1,3 +1,4 @@
+#Cholesky method
 import math
 import numpy as np
 import time
@@ -13,9 +14,14 @@ def cholesky(A):
             else:
                 L[i][k] = (1.0 / L[k][k] * (A[i][k] - tmp_sum))
     return L
-n = 500
+n = 3
 X = np.random.rand(n, n)
 A = np.transpose(X) * X
+
+for i in range(n):
+    for j in range(n):
+        if i != j:
+            A[i][i] += A[i][j] 
 
 L = A
 
@@ -34,7 +40,7 @@ linalg_time = time.time()
 print(np.linalg.cholesky(L))
 linalg_time = time.time() - linalg_time
 
-print ("L:")
+print ("L(Answer):")
 print(B)
 
 print("MY TIME:", my_time)
