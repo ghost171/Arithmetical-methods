@@ -40,3 +40,7 @@ which can be derived geometrically from the figure on the right. It is a special
 
 Solving this equation for y, which is the unknown value at x, gives 
 y = y0 + (x - x0)(y1 - y0) / (x1 - x0) = (y0(x1 - x) + y1(x0 - x)) / (x1 - x0)
+which is the formula for linear interpolation in the interval ( x 0 , x 1 ) {\displaystyle (x_{0},x_{1})} (x_{0},x_{1}). Outside this interval, the formula is identical to linear extrapolation.
+
+This formula can also be understood as a weighted average. The weights are inversely related to the distance from the end points to the unknown point; the closer point has more influence than the farther point. 
+Thus, the weights are (x − x0) / (x1 − x0) and (x1 − x) / (x1 − x0) ,which are normalized distances between the unknown point and each of the end points. 
