@@ -31,3 +31,8 @@ Lets note what programs use:
   
  If you going to change input data, write your changes in the files train.dat, train.ans, test.dat.
  In test.ans you have an answer
+
+## How does this programs works?
+### Linear interpolation
+If the two known points are given by the coordinates.
+the linear interpolant is the straight line between these points. For a value x in the interval ( x0 , x1 ) the value y along the straight line is given from the equation of slopes (y - y0)/
