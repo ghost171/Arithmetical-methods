@@ -18,7 +18,7 @@ For example:
 
 To execute the programs in Jupyter press button-combination Shift+Enter.
 ## What do this programs
-
+### Heat equation
 In physics and mathematics, the heat equation is a partial differential equation that describes how the distribution of some quantity (such as heat) evolves over time in a solid medium, as it spontaneously flows from places where it is higher towards places where it is lower. It is a special case of the diffusion equation.
 
 This equation was first developed and solved by Joseph Fourier in 1822 to describe heat flow. 
