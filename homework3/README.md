@@ -91,24 +91,16 @@ In the mathematical field of numerical analysis, spline interpolation is a form 
 Spline interpolation is often preferred over polynomial interpolation because the interpolation error can be made small even when using low degree polynomials for the spline. 
 Spline interpolation avoids the problem of Runge's phenomenon, in which oscillation can occur between points when interpolating using high degree polynomials.
 
-The interpolating function takes on specified values at the knots.
+Given a set of n + 1 data points (xi,yi) where no two xi are the same and a = x0 < x1 < ...< xn = b, the spline S(x) is a function satisfying: 
 
-Given the set of values {xi,f(xi)}it is desired to pass a smooth curve through those points, and the curve shall have continuous first and second derivatives at the knots.
-
-The formulas for the cubic spline are derived as follows for one region. Since the function is a cubic function the third derivative is constant and the second derivative is linear in x. Write it as
-
-Integrate this once to give
-
-and once more to give
-
-Now define
-
-so that
-
-A number of algebraic steps make the interpolation easy. Write these formulas for the i-th element as well as the i­1-th element. Then apply the continuity conditions for the first and second derivative and eliminate the values yi' and y"i-1 [see Ortega and Poole, p. 163, 1981]. The result is
-
-This is a tri-diagonal system for the set of {y''i} in terms of the set of {yi}. Since the continuity condtions apply only for i=2,...,NT-1 we have only NT­2 conditions for the NT values of y''i. Two additional conditions are needed, and these are usually taken as the value of the second derivative at each end of the domain, y''1, y''NT. If these values are zero we get the natural cubic splines; they can also be set to achieve some other purpose, such as making the first derivative match some desired condition at the two ends. With these values taken as zero, in the natural cubic spline, we have a NT­2 system of tridiagonal equations, which is easily solved (link). Once the second derivatives are known at each of the knots the first derivatives are given by
-
-The function itself is then known within each element.
-
-The spline interplation is easily done in Matlab. The following code supplies a vector y(x), fits those points to a natural spline [pp = spline(x,y)], evaluates the spline at a set of points xx [v=ppval(pp,xx);], and then plots the spline (in blue) as well as the knots (in red). Since the original function is a cubic function, the spline interpolation is exact. 
+1. S(x) from C^2[a, b];
+2. On each subinterval [xi-1, xi], S(x)  is a polynomial of degree 3, where i = 1, ..., n
+3. S(xi) = yi, for all i = 0, 1, .., n
+Let us assume that:
+        C1(x), x0 <= x <= x1
+        ...
+ S(x) = Ci(x), xi-1 < x <= xi
+        ...
+        Cn(x) , xn-1 < x <= xn 
+ 
+ where each Ci = ai + bix + cix^2 + dix^3 (di ≠ 0) is a cubic function, i = 1 , ... , n.
