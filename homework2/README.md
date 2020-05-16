@@ -51,3 +51,6 @@ To execute the programs in Jupyter press button-combination Shift+Enter.
  The Gauss–Seidel method now solves the left hand side of this expression for x, using previous value for x on the right hand side. 
  Analytically, this may be written as: 
  x(k + 1) = (L*)^(-1)(b - Ux(k))
+
+## Input data
+ As input, programs receive matrix sizes
