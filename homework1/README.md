@@ -53,3 +53,7 @@ This decomposition is related to the classical Cholesky decomposition of the for
  Some indefinite matrices for which no Cholesky decomposition exists have an LDL decomposition with negative entries in D.
  For these reasons, the LDL decomposition may be preferred. For real matrices, the factorization has the form A = LDLT and is often referred to as LDLT decomposition (or LDLT decomposition, or LDL′). 
  It is closely related to the eigendecomposition of real symmetric matrices, A = QΛQT. 
+
+## Input
+
+As input, program receives sizes of matrix. 
