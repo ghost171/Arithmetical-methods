@@ -63,7 +63,7 @@ To execute the programs in Jupyter press button-combination Shift+Enter.
 Also, that program generates random matrix for our terms. 
 
 ## Input data
- As input, programs receive matrix sizes.
+ Because that program generates current matrix that program receives sizes of matrix.
 ## Time graphics
 Times-graphic was builded. This is  dependency time of our program's work from size of our matrix.
 There are:
