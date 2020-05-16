@@ -35,4 +35,8 @@ Lets note what programs use:
 ## How does this programs works?
 ### Linear interpolation
 If the two known points are given by the coordinates.
-the linear interpolant is the straight line between these points. For a value x in the interval ( x0 , x1 ) the value y along the straight line is given from the equation of slopes (y - y0)/
+the linear interpolant is the straight line between these points. For a value x in the interval ( x0 , x1 ) the value y along the straight line is given from the equation of slopes (y - y0)/(x - x0) = (y1 - y0)/(x1 - x0)
+which can be derived geometrically from the figure on the right. It is a special case of polynomial interpolation with n = 1.
+
+Solving this equation for y, which is the unknown value at x, gives 
+y = y0 + (x - x0)(y1 - y0) / (x1 - x0) = (y0(x1 - x) + y1(x0 - x)) / (x1 - x0)
