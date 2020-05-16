@@ -68,7 +68,7 @@ Also, that program generates random matrix for our terms.
 Times-graphic was builded. This is  dependency time of our program's work from size of our matrix.
 There are:
  
- Hauss.png
- Cholesky.png
- Sweep.png
+ Jacoby.png
+ Seidel.png
+ 
  
