@@ -34,8 +34,22 @@ If the matrix is associated to a system of linear equations, then these operatio
 Therefore, if one's goal is to solve a system of linear equations, then using these row operations could make the problem easier. 
     
  ### Sweep 
- In numerical linear algebra, the tridiagonal matrix algorithm, also known as the Thomas algorithm (named after Llewellyn Thomas), is a simplified form of Gaussian elimination that can be used to solve tridiagonal systems of equations. A tridiagonal system for n unknowns may be written as
+ In numerical linear algebra, the tridiagonal matrix algorithm, also known as the Thomas algorithm (named after Llewellyn Thomas), is a simplified form of Gaussian elimination that can be used to solve tridiagonal systems of equations.
+Or such systems, the solution can be obtained in O(n) operations instead of O(n^3) required by Gaussian elimination. 
+And then an (abbreviated) backward substitution produces the solution. Examples of such matrices commonly arise from the discretization of 1D Poisson equation and natural cubic spline interpolation. 
 
-    a i x i − 1 + b i x i + c i x i + 1 = d i , {\displaystyle a_{i}x_{i-1}+b_{i}x_{i}+c_{i}x_{i+1}=d_{i},\,\!} a_{i}x_{i-1}+b_{i}x_{i}+c_{i}x_{i+1}=d_{i},\,\!
+### Cholseky
+In linear algebra, the Cholesky decomposition or Cholesky factorization (pronounced /ʃo-LESS-key/) is a decomposition of a Hermitian, positive-definite matrix into the product of a lower triangular matrix and its conjugate transpose.
+A closely related variant of the classical Cholesky decomposition is the LDL decomposition,
 
-where a 1 = 0 {\displaystyle a_{1}=0\,} a_{1}=0\, and c n = 0 {\displaystyle c_{n}=0\,} c_{n}=0\,
+    A = LDL*
+where L is a lower unit triangular (unitriangular) matrix, and D is a diagonal matrix.
+
+This decomposition is related to the classical Cholesky decomposition of the form LL* as follows: 
+    
+    A=LDL* =LD^(1/2)D*^(1/2)L*^(1/2) = (LD^(1/2)) (LD^(1/2))*
+    
+ The LDL variant, if efficiently implemented, requires the same space and computational complexity to construct and use but avoids extracting square roots. 
+ Some indefinite matrices for which no Cholesky decomposition exists have an LDL decomposition with negative entries in D.
+ For these reasons, the LDL decomposition may be preferred. For real matrices, the factorization has the form A = LDLT and is often referred to as LDLT decomposition (or LDLT decomposition, or LDL′). 
+ It is closely related to the eigendecomposition of real symmetric matrices, A = QΛQT. 
