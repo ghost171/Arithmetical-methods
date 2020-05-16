@@ -62,7 +62,7 @@ This decomposition is related to the classical Cholesky decomposition of the for
 
 Because that program generates current matrix that program receives sizes of matrix. 
 
-Time graphics
+## Time graphics
 
 Times-graphic was builded. This is dependency time of our program's work from size of our matrix. There are:
 
