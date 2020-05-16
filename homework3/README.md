@@ -84,3 +84,5 @@ On the other hand,
   In other words, all basis polynomials are zero at x = xi, except lj(x), for which it holds that lj(xj) = 1 , because it lacks the (x − xj) term.
 
 It follows that yjlj(xj) = yj, so at each point xj, L(xj) = yj + 0 + 0 + ... + 0 = yj, showing that L interpolates the function exactly. 
+
+### Spline interpolation
