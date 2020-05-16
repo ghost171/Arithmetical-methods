@@ -128,3 +128,4 @@ The stationary convection–diffusion equation describes the steady-state behavi
     0=∇⋅(D∇c)−∇⋅(vc)+R. 
 
 ## Input data:
+ In input data you have to set how shallow will be a cell.
