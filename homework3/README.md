@@ -104,3 +104,16 @@ Let us assume that:
         Cn(x) , xn-1 < x <= xn 
  
  where each Ci = ai + bix + cix^2 + dix^3 (di ≠ 0) is a cubic function, i = 1 , ... , n.
+## Illustartions of graphics
+### Linear interpolation:
+#### My algorithm:
+![alt text](My_alg_linear_interpolation.png)
+#### Linalg algorithm:
+![alt text](Linalg_alg_linear_interpolation.png)
+### Lagrange interpolation:
+#### My algorithm:
+![alt text](My_alg_Lagrange_interpolation.png)
+#### Linalg algorithm:
+![alt text](Linalg_alg_Lagrange_interpolation.png)
+### Spline interpolation:
+![alt_text](spline_interpolation.png)
