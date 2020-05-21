@@ -146,3 +146,8 @@ My time: 0.0004596710205078125
 
 Linalg time: 0.0005376338958740234
 
+## Illustartions of graphics
+### Jacoby
+![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework2/Jacoby.png)
+### Seidel
+![alt text](Seidel.png)
