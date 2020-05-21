@@ -130,5 +130,7 @@ The stationary convection–diffusion equation describes the steady-state behavi
 ## Input data:
  In input data you have to set how shallow will be a cell.
 ## Illustrations:
-##
-[![Watch the video](https://github.com/ghost171/Arithmetical-methods/blob/master/homework4/transfer.mp4)](https://github.com/ghost171/Arithmetical-methods/blob/master/homework4/transfer.mp4)
+### Transport equation: 
+[![Watch the video](transfer_transport_equation.mp4)
+### Heat equation:
+[![Watch the video](transfer_heat_equaation.mp4)
