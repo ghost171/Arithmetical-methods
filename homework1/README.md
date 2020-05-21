@@ -168,3 +168,8 @@ Linalg: [1.75898992 0.27559671 0.01612521 0.44045912 0.9301341 ]
 My time: 0.00043892860412597656
 
 Linalg time: 0.02393507957458496
+
+
+## Illustrations of graphics
+
+![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/Hauss.png)
