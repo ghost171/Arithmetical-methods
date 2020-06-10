@@ -162,6 +162,6 @@ Linalg time: 0.0005376338958740234
 
 ## Illustartions of graphics
 ### Jacoby
-![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework2/Jacoby.png)
+![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework2/pctrs/Jacoby.png)
 ### Seidel
-![alt text](Seidel.png)
+![alt text](pctrs/Seidel.png)
