@@ -195,10 +195,10 @@ Linalg time: 0.02393507957458496
 ## Illustrations of graphics
 
 ### Hauss
-![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/Hauss.png)
+![alt text](pctrs/https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/Hauss.png)
 
 ### Cholesky
-![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/Cholesky.png)
+![alt text](pctrs/https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/Cholesky.png)
 
 ### Sweep
-![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/sweep.png)
+![alt text](pctrs/https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/sweep.png)
