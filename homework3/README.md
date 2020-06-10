@@ -107,13 +107,13 @@ Let us assume that:
 ## Illustartions of graphics
 ### Linear interpolation:
 #### My algorithm:
-![alt text](My_alg_linear_interpolation.png)
+![alt text](pctrs/My_alg_linear_interpolation.png)
 #### Linalg algorithm:
-![alt text](Linalg_alg_linear_interpolation.png)
+![alt text](pctrs/Linalg_alg_linear_interpolation.png)
 ### Lagrange interpolation:
 #### My algorithm:
-![alt text](My_alg_Lagrange_interpolation.png)
+![alt text](pctrs/My_alg_Lagrange_interpolation.png)
 #### Linalg algorithm:
-![alt text](Linalg_alg_Lagrange_interpolation.png)
+![alt text](pctrs/Linalg_alg_Lagrange_interpolation.png)
 ### Spline interpolation:
-![alt_text](spline_interpolation.png)
+![alt_text](pctrs/spline_interpolation.png)
