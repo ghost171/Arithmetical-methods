@@ -198,7 +198,7 @@ Linalg time: 0.02393507957458496
 ![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/pctrs/Cholesky.png)
 
 ### Cholesky
-![alt text](pctrs/https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/pctrs/Cholesky.png)
+![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/pctrs/Cholesky.png)
 
 ### Sweep
-![alt text](pctrs/https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/pctrs/sweep.png)
+![alt text](https://github.com/ghost171/Arithmetical-methods/blob/master/homework1/pctrs/sweep.png)
